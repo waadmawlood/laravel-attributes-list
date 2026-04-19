@@ -13,6 +13,8 @@
         body { background-color: #0f0f0f; color: var(--gray-200); min-height: 100vh; margin: 0; }
         .navbar { background: rgba(15, 15, 15, 0.8); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding: 1rem 0; position: sticky; top: 0; z-index: 100; }
         .navbar-brand { font-weight: 800; font-size: 1.25rem; color: var(--primary) !important; text-decoration: none; }
+        .navbar a.text-white { transition: color 0.3s; }
+        .navbar a.text-white:hover { color: var(--primary) !important; }
         .hero { background: var(--bg-gradient); padding: 4rem 0 3rem; text-align: center; position: relative; overflow: hidden; }
         .hero::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at center, rgba(255, 45, 32, 0.08) 0%, transparent 50%); animation: pulse 15s ease-in-out infinite; pointer-events: none; }
         @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.1); opacity: 0.5; } }
@@ -55,8 +57,13 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="container">
-            <a class="navbar-brand" href="#">#[Table]</a>
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand" href="#">#[Attributes]</a>
+            <a href="https://github.com/waadmawlood" class="text-white" target="_blank" rel="noopener noreferrer" title="View on GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                </svg>
+            </a>
         </div>
     </nav>
 
@@ -79,7 +86,7 @@
 
     <footer>
         <div class="container">
-            <p>Laravel PHP Attributes - Created by Love ❤️</p>
+            <p>Laravel PHP Attributes - Created <a href="https://github.com/waadmawlood" class="text-secondary" target="_blank" rel="noopener noreferrer" title="View on GitHub">Waad Mawlood</a></p>
         </div>
     </footer>
 
